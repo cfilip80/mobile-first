@@ -1,0 +1,569 @@
+/*------  Mobile First version -----------*/
+
+* {box-sizing:border-box}
+
+@import "./variables";
+@import "./mixins";
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    min-height: 100vw;
+    width: 100%;
+    min-width: 250px;
+    background-color:white;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 250px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image:$gradientColor;
+}
+
+.nav-section {
+    @include flexCenter();
+    height: 50px;
+    width: auto;
+    background-color: $backgroundColor;
+    border-radius: 10px;
+    color: #333333;
+    margin: 10px 0;
+    padding: 0px 10px;
+
+}
+
+.nav-section h1 {
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+
+.name-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.name-container h3 span {
+    font-size: 2vw;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    background-color: $greenColor;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+.article-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 24%;
+    height: auto;
+    background-color: white;
+    margin: 0;
+}
+
+.article-wrapper p {
+    text-align: center;
+}
+
+.article-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: auto;
+    box-sizing: border-box;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid $backgroundColor;
+    margin: 5px 0;
+}
+
+article a {
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+}
+
+article span {
+    font-family: 'Lora', serif;
+}
+
+article img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+  }
+
+article input {
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    background-color: $backgroundColor;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 10px 0 10px 0;
+}
+
+article:hover {
+    box-shadow: 0  10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.row-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.search-container {
+    @include flexCenter();
+    height: 100%;
+    flex: 1;
+}
+
+.search-container input {
+    display: flex;
+    height:50px;
+    width: 70%;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input:focus {
+    outline: none;
+
+}
+
+.search-container input:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-icon {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.fruit-logo {
+    height: 180px;
+    margin-bottom: 50px;
+}
+
+.shopping-cart {
+    display: none;
+}
+
+.company-logo {
+    height: 40%;
+    margin-bottom: 60px;
+}
+
+.fa-shopping-cart {
+    margin: 0 20px;
+}
+
+.fa-user {
+    margin-right: 20px;
+}
+
+.fa-heart, .fa-shopping-cart, .fa-user {
+    color: $greenColor;
+    font-size: 36px;
+}
+
+.fa-search {
+    transform: translateX(-200%);
+}
+
+.nav-bar {
+    display: none;
+}
+
+.nav-bar a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+.nav-bar a:hover {
+    color:$greenColor;
+    background: white;
+    text-decoration: underline;
+    padding: 8px 12px;
+}
+
+.nav-bar a.active {
+    color:$greenColor;
+    background: white;
+    padding: 8px 12px;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    height: 80px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+}
+
+
+.img-container {
+    display: flex;
+    margin: 0;
+}
+
+.span-container {
+    display: flex;
+    flex-shrink: 1;
+}
+
+.span-container span {
+    font-family: 'Lora', serif;
+    font-size: 2vh;
+}
+
+
+.button-container {
+    display: flex;
+    flex-shrink: 1;
+}
+
+.logo-container-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.logo-container-footer img {
+    height: 100px;
+}
+
+.divider {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 45%;
+}
+
+.divider-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    min-width: 250px;
+    background-image:$gradientColor;
+    bottom: 0%;
+    box-sizing: border-box;
+}
+
+.footer-wrapper {
+    @include flexCenter();
+}
+
+.footer-links-container {
+    display: flex;
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-links-container-1 {
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.footer-links {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.footer-links-left {
+    margin-left: 20px;
+}
+
+.copyright {
+    @include flexCenter();
+    font-size: 5vw;
+    width: auto;
+    padding: 5%;
+}
+
+.footer-links li {
+    margin-bottom: 0;
+}
+
+.footer-links li a{
+    font-size: 1rem;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.divider {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 80%;
+}
+
+.divider-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    font-size: 5vh;
+    margin-top: 50px;
+}
+
+.links a {
+    color:$greenColor;
+}
+
+.links a.active {
+    color:orangered;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 70px;
+}
+
+.burger-menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/burger-menu.png), url(/images/close.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, center left 50px;
+}
+
+.burger-menu-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.burger-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 900;
+    background-color: #111;
+}
+
+.icons-container-menu {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+/*------------------Desktop Version-------------------*/
+
+@media screen and (min-width: 769px) {
+
+    body {
+        width: auto;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 250px;
+        width: 100%;
+        background-color: white;
+        background-image: none;
+    }
+
+    .nav-section {
+        @include flexCenter();
+        width: 60%;
+        height: 60px;
+    }
+
+    .nav-section h1 {
+        font-size: 28px;
+    }
+
+    .span-container span {
+        font-size: medium;
+    }
+
+    .fruit-logo {
+        margin-bottom: 0;
+    }
+
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 768px;
+        margin: 10px 10px;
+        width: 100%;
+    }
+
+    .banner img {
+        height: 90%;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        height: 50px;
+        width: 100%;
+        padding: 0 40px;
+        background-image:$gradientColor;
+        box-shadow: 0px  2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .shopping-cart {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: auto;
+        height: 100%;
+        padding: 0 20px;
+        flex: 1;
+    }
+
+
+    .article-wrapper {
+        height: auto;
+    }
+
+    article input {
+        height: auto;
+        width: 80%;
+    }
+
+
+    .footer-links li a{
+        font-size: 1.5vw;
+    }
+
+    .copyright {
+        font-size: 1.65vw;
+        font-weight: bold;
+    }
+
+    .divider {
+        border-top: 8px solid #bbb;
+        border-radius: 5px;
+        margin: 5px 0;
+        width: 45%;
+    }
+
+    .burger-menu, .burger-menu-btn {
+        display: none;
+    }
+
+}
+
